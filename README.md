@@ -1,3 +1,5 @@
+#Agenda pBuffer
+Trabalho da disciplina de Algoritmos e Estrutura de Dados  I - semestre 2025/2
 
 Faça uma agenda com o seguinte menu:
 1- Adicionar Pessoa (Nome, Idade, email)
