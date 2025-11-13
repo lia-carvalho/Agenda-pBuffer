@@ -94,6 +94,8 @@ void adicionarPessoa(){
         return;
     }
     pbuffer= novoBuffer; // se deu certo a alocação, atualiza o ponteiro
+
+    qntd = ( int* )pbuffer + 1;  //atualiza o ponteiro qntd para apontar para o novo local da memória
  
     //calcula o endereço da nova pessoa: endereço base(pbuffer)+deslocamento
     //início da agenda: 2*sizeof(int)
@@ -196,7 +198,6 @@ for ( *op = 0; *op < *qntd ; ( *op )++){
 }
 if ( *ptr_Encontrado == 0 ){
     printf( "Pessoa não encontrada.\n" );
-
 }
 //reduz o tamanho do buffer antes de sair 
 void *bufferReduzido= realloc(pbuffer, ( 2 * sizeof( int ) ) + ( ( *qntd ) * TAM_PESSOA ) );
@@ -205,7 +206,6 @@ if ( bufferReduzido == NULL ){
 } else{
 pbuffer= bufferReduzido;
 }
-
 return;
 }
 
