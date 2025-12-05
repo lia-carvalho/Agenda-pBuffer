@@ -181,6 +181,7 @@ qntd = ( int * )pbuffer + 1;
 //Local no buffer pra armazenar o nome a ser buscado(após a última pessoa):
 char *nomeBuscado = ( char* )pbuffer + 2 * sizeof( int ) + ( ( *qntd )*TAM_PESSOA );
 printf( "Digite o nome da pessoa a ser buscada:\n" );
+scanf( " " );
 fgets ( nomeBuscado, NOME, stdin );
 nomeBuscado[strcspn(nomeBuscado,"\n")] = 0;
 
@@ -235,4 +236,5 @@ void listarTodos(){
     }
     printf("\n_______________________________________\n");
     return;
+
 }
